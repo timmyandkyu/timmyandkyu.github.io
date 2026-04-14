@@ -71,28 +71,42 @@
       border-radius: 14px;
       font-weight: bold;
       font-size: 16px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.18s ease, opacity 0.18s ease;
     }
 
+    /* Hover ohne Glow */
     .btn:hover {
-  transform: scale(1.05);
-  opacity: 0.98;
-}
+      transform: scale(1.05);
+      opacity: 0.98;
+    }
 
-/* Desktop Glow */
-.btn.twitter:hover {
-  box-shadow: 0 0 40px rgba(255,255,255,0.8);
-}
+    .btn:active {
+      transform: scale(0.97);
+    }
 
-.btn.instagram:hover {
-  box-shadow: 0 0 40px rgba(225,48,108,0.9);
-}
+    /* Shine Effekt */
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+      );
+      transform: skewX(-20deg);
+    }
 
-/* Mobile Feedback (Finger drücken) */
-.btn:active {
-  transform: scale(0.97);
-  box-shadow: 0 0 50px rgba(255,255,255,0.9);
-}
+    .btn:hover::before {
+      left: 120%;
+      transition: left 0.6s ease;
+    }
 
     .btn.twitter {
       background: white;
@@ -100,26 +114,23 @@
     }
 
     .btn.instagram {
-  background: #E1306C;
-  color: white;
-  box-shadow: 0 0 20px rgba(225,48,108,0.3);
-}
+      background: #E1306C;
+      color: white;
+    }
 
     .btn.primary {
       background: linear-gradient(135deg, #ff4d6d, #ff0066);
       color: white;
-      box-shadow: 0 0 30px rgba(255, 0, 100, 0.4);
+      animation: pulse 2.2s infinite;
     }
- .btn.primary {
-    animation: pulse 2.2s infinite;
-  }
 
-  @keyframes pulse {
-    0% { box-shadow: 0 0 20px rgba(255,0,100,0.4); }
-    50% { box-shadow: 0 0 40px rgba(255,0,100,0.8); }
-    100% { box-shadow: 0 0 20px rgba(255,0,100,0.4); }
-  }
-</style>
+    @keyframes pulse {
+      0% { box-shadow: 0 0 20px rgba(255,0,100,0.4); }
+      50% { box-shadow: 0 0 40px rgba(255,0,100,0.8); }
+      100% { box-shadow: 0 0 20px rgba(255,0,100,0.4); }
+    }
+
+  </style>
 </head>
 
 <body>
@@ -132,16 +143,15 @@
       👀 twinks • a little more than just friends • spicy
     </p>
 
-<p style="font-size:13px; opacity:0.6;">
-  updated every few days
-</p>
+    <p style="font-size:13px; opacity:0.6;">
+      updated every few days
+    </p>
 
     <a href="#" class="btn primary">🔥 Exclusive Content</a>
     
     <a href="https://x.com/TimmyAndKyu" class="btn twitter">Twitter / X</a>
     <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
 
-    <!-- <a href="#" class="btn primary">🔥 Exclusive Content</a> -->
   </div>
 </body>
 </html>
