@@ -33,6 +33,7 @@
       font-size: 15px;
     }
 
+    /* BUTTON BASE */
     .btn {
       display: block;
       margin: 12px auto;
@@ -43,27 +44,57 @@
       border-radius: 14px;
       font-weight: bold;
       font-size: 16px;
-      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+      position: relative;
+      overflow: hidden;
+
+      transition: all 0.2s ease;
     }
 
-    .btn:hover,
+    /* GLOSS EFFECT */
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        rgba(255,255,255,0.1),
+        rgba(255,255,255,0.5),
+        rgba(255,255,255,0.1)
+      );
+      transition: all 0.4s ease;
+    }
+
+    /* GLOSS MOVE */
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    /* HOVER / TAP */
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
     .btn:active {
-      transform: scale(1.04);
-      box-shadow: 0 0 25px rgba(255,255,255,0.25);
-      opacity: 0.95;
+      transform: scale(0.97);
     }
 
+    /* BUTTON STYLES */
     .btn.twitter {
       background: white;
       color: black;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
     }
 
     .btn.instagram {
       background: #E1306C;
       color: white;
+      box-shadow: 0 0 20px rgba(225,48,108,0.4);
     }
 
-    /* optional: stärkster Button (z.B. OnlyFans später) */
+    /* optional: stärkster Button */
     .btn.primary {
       background: linear-gradient(135deg, #ff4d6d, #ff0066);
       color: white;
@@ -90,7 +121,7 @@
 
   <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
 
-  <!-- Beispiel für später -->
+  <!-- später -->
   <!-- <a href="#" class="btn primary">🔥 Exclusive Content</a> -->
 
 </body>
