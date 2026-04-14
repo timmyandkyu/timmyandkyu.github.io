@@ -14,21 +14,21 @@
   background: black;
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 500px;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(225,48,108,0.28) 0%, rgba(225,48,108,0.12) 35%, rgba(0,0,0,0) 70%);
-  filter: blur(70px);
-  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(225,48,108,0.25), transparent 60%);
+  z-index: 0;
   pointer-events: none;
+}
+
+/* WICHTIG: Content nach vorne holen */
+body > * {
+  position: relative;
+  z-index: 1;
 }
     
     img {
