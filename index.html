@@ -20,11 +20,15 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(225,48,108,0.18), transparent 45%);
+  background:
+    radial-gradient(circle at center, rgba(225,48,108,0.16), transparent 40%),
+    radial-gradient(circle at top center, rgba(255,255,255,0.05), transparent 30%);
   z-index: 0;
   pointer-events: none;
 }
-
+body {
+  background: linear-gradient(to bottom, #050505, #000000);
+}
 /* WICHTIG: Content nach vorne holen */
 body > * {
   position: relative;
