@@ -110,7 +110,16 @@
       color: white;
       box-shadow: 0 0 30px rgba(255, 0, 100, 0.4);
     }
-  </style>
+ .btn.primary {
+    animation: pulse 2.2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 20px rgba(255,0,100,0.4); }
+    50% { box-shadow: 0 0 40px rgba(255,0,100,0.8); }
+    100% { box-shadow: 0 0 20px rgba(255,0,100,0.4); }
+  }
+</style>
 </head>
 
 <body>
