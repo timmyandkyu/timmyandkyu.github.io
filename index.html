@@ -1,151 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TimmyAndKyu</title>
 
   <style>
-    body {
-  margin: 0;
-  padding: 40px 20px;
-  font-family: sans-serif;
-  color: white;
-  text-align: center;
-  background: black;
-  position: relative;
-  min-height: 100vh;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at center, rgba(225,48,108,0.16), transparent 40%),
-    radial-gradient(circle at top center, rgba(255,255,255,0.05), transparent 30%);
-  z-index: 0;
-  pointer-events: none;
-}
-body {
-  background: linear-gradient(to bottom, #050505, #000000);
-}
-/* WICHTIG: Content nach vorne holen */
-body > * {
-  position: relative;
-  z-index: 1;
-}
-    
-    img {
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      font-family: sans-serif;
+      background: black;
+      color: white;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 32px 20px 48px;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .profile-img {
       width: 120px;
       height: 120px;
       object-fit: cover;
       border-radius: 50%;
-      margin-top: 20px;
+      margin: 0 auto 20px;
+      display: block;
     }
 
     h1 {
       font-size: 28px;
-      margin: 15px 0;
+      line-height: 1.15;
+      margin: 0 0 16px;
+      font-weight: 700;
     }
 
     p {
-      color: gray;
-      margin-bottom: 30px;
-      font-size: 15px;
+      color: #a0a0a0;
+      margin: 0 0 28px;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
-    /* BUTTON BASE */
     .btn {
       display: block;
-      margin: 12px auto;
-      width: 80%;
-      max-width: 320px;
-      padding: 16px;
+      width: 100%;
+      padding: 18px 16px;
+      margin: 14px 0;
       text-decoration: none;
-      border-radius: 14px;
-      font-weight: bold;
-      font-size: 16px;
-      position: relative;
-      overflow: hidden;
-
-      transition: all 0.2s ease;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 18px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
     }
 
-    /* GLOSS BASIS → UNSICHTBAR */
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 120%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
-  opacity: 0; /* wichtig */
-  transition: all 0.4s ease;
-}
-
-/* NUR BEI HOVER */
-.btn:hover::before {
-  left: 100%;
-  opacity: 1;
-}
-
-    /* HOVER / TAP */
     .btn:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
+      opacity: 0.98;
     }
 
     .btn:active {
-      transform: scale(0.97);
+      transform: scale(0.98);
     }
 
-    /* BUTTON STYLES */
     .btn.twitter {
       background: white;
       color: black;
-      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      box-shadow: 0 0 18px rgba(255,255,255,0.18);
     }
 
     .btn.instagram {
       background: #E1306C;
       color: white;
-      box-shadow: 0 0 20px rgba(225,48,108,0.4);
-    }
-
-    /* optional: stärkster Button */
-    .btn.primary {
-      background: linear-gradient(135deg, #ff4d6d, #ff0066);
-      color: white;
-      box-shadow: 0 0 30px rgba(255, 0, 100, 0.4);
+      box-shadow: 0 0 18px rgba(225,48,108,0.28);
     }
   </style>
 </head>
-
 <body>
+  <div class="container">
+    <img
+      class="profile-img"
+      src="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/WhatsApp%20Image%202026-04-14%20at%2008.49.20.jpeg"
+      alt="TimmyAndKyu Profilbild"
+    >
 
-  <!-- Profilbild -->
-  <img src="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/WhatsApp%20Image%202026-04-14%20at%2008.49.20.jpeg">
+    <h1>TimmyAndKyu</h1>
 
-  <!-- Name -->
-  <h1>TimmyAndKyu</h1>
+    <p>👀 twinks • a little more than just friends • spicy</p>
 
-  <!-- Beschreibung -->
-  <p>
-    👀 twinks • a little more than just friends • spicy
-  </p>
-
-  <!-- Buttons -->
-  <a href="https://x.com/TimmyAndKyu" class="btn twitter">Twitter / X</a>
-
-  <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
-
-  <!-- später -->
-  <!-- <a href="#" class="btn primary">🔥 Exclusive Content</a> -->
-
+    <a href="https://x.com/TimmyAndKyu" class="btn twitter">Twitter / X</a>
+    <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
+  </div>
 </body>
 </html>
