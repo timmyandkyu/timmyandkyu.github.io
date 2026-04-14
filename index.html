@@ -12,6 +12,33 @@
       background: black;
       color: white;
       text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at center, rgba(225, 48, 108, 0.18) 0%, rgba(225, 48, 108, 0.08) 18%, rgba(0, 0, 0, 0) 45%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at top center, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 12%, rgba(0, 0, 0, 0) 35%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
     }
 
     img {
@@ -20,6 +47,7 @@
       object-fit: cover;
       border-radius: 50%;
       margin-top: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
     }
 
     h1 {
@@ -49,7 +77,7 @@
     .btn:hover,
     .btn:active {
       transform: scale(1.04);
-      box-shadow: 0 0 25px rgba(255,255,255,0.25);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
       opacity: 0.95;
     }
 
@@ -61,9 +89,9 @@
     .btn.instagram {
       background: #E1306C;
       color: white;
+      box-shadow: 0 0 20px rgba(225, 48, 108, 0.25);
     }
 
-    /* optional: stärkster Button (z.B. OnlyFans später) */
     .btn.primary {
       background: linear-gradient(135deg, #ff4d6d, #ff0066);
       color: white;
@@ -73,25 +101,19 @@
 </head>
 
 <body>
+  <div class="content">
+    <img src="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/WhatsApp%20Image%202026-04-14%20at%2008.49.20.jpeg">
 
-  <!-- Profilbild -->
-  <img src="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/WhatsApp%20Image%202026-04-14%20at%2008.49.20.jpeg">
+    <h1>TimmyAndKyu</h1>
 
-  <!-- Name -->
-  <h1>TimmyAndKyu</h1>
+    <p>
+      👀 twinks • a little more than just friends • spicy
+    </p>
 
-  <!-- Beschreibung -->
-  <p>
-    👀 twinks • a little more than just friends • spicy
-  </p>
+    <a href="https://x.com/TimmyAndKyu" class="btn twitter">Twitter / X</a>
+    <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
 
-  <!-- Buttons -->
-  <a href="https://x.com/TimmyAndKyu" class="btn twitter">Twitter / X</a>
-
-  <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
-
-  <!-- Beispiel für später -->
-  <!-- <a href="#" class="btn primary">🔥 Exclusive Content</a> -->
-
+    <!-- <a href="#" class="btn primary">🔥 Exclusive Content</a> -->
+  </div>
 </body>
 </html>
