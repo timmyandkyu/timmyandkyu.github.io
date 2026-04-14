@@ -1,112 +1,97 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TimmyAndKyu</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      width: 100%;
-      min-height: 100%;
+      padding: 40px 20px;
       font-family: sans-serif;
       background: black;
       color: white;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 32px 20px 48px;
       text-align: center;
-      overflow-x: hidden;
     }
 
-    .container {
-      width: 100%;
-      max-width: 420px;
-      margin: 0 auto;
-    }
-
-    .profile-img {
+    img {
       width: 120px;
       height: 120px;
       object-fit: cover;
       border-radius: 50%;
-      margin: 0 auto 20px;
-      display: block;
+      margin-top: 20px;
     }
 
     h1 {
       font-size: 28px;
-      line-height: 1.15;
-      margin: 0 0 16px;
-      font-weight: 700;
+      margin: 15px 0;
     }
 
     p {
-      color: #a0a0a0;
-      margin: 0 0 28px;
-      font-size: 16px;
-      line-height: 1.5;
+      color: gray;
+      margin-bottom: 30px;
+      font-size: 15px;
     }
 
     .btn {
       display: block;
-      width: 100%;
-      padding: 18px 16px;
-      margin: 14px 0;
+      margin: 12px auto;
+      width: 80%;
+      max-width: 320px;
+      padding: 16px;
       text-decoration: none;
-      border-radius: 16px;
-      font-weight: 700;
-      font-size: 18px;
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 16px;
       transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
     }
 
-    .btn:hover {
-      transform: scale(1.03);
-      opacity: 0.98;
-    }
-
+    .btn:hover,
     .btn:active {
-      transform: scale(0.98);
+      transform: scale(1.04);
+      box-shadow: 0 0 25px rgba(255,255,255,0.25);
+      opacity: 0.95;
     }
 
     .btn.twitter {
       background: white;
       color: black;
-      box-shadow: 0 0 18px rgba(255,255,255,0.18);
     }
 
     .btn.instagram {
       background: #E1306C;
       color: white;
-      box-shadow: 0 0 18px rgba(225,48,108,0.28);
+    }
+
+    /* optional: stärkster Button (z.B. OnlyFans später) */
+    .btn.primary {
+      background: linear-gradient(135deg, #ff4d6d, #ff0066);
+      color: white;
+      box-shadow: 0 0 30px rgba(255, 0, 100, 0.4);
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <img
-      class="profile-img"
-      src="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/WhatsApp%20Image%202026-04-14%20at%2008.49.20.jpeg"
-      alt="TimmyAndKyu Profilbild"
-    >
 
-    <h1>TimmyAndKyu</h1>
+  <!-- Profilbild -->
+  <img src="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/WhatsApp%20Image%202026-04-14%20at%2008.49.20.jpeg">
 
-    <p>👀 twinks • a little more than just friends • spicy</p>
+  <!-- Name -->
+  <h1>TimmyAndKyu</h1>
 
-    <a href="https://x.com/TimmyAndKyu" class="btn twitter">Twitter / X</a>
-    <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
-  </div>
+  <!-- Beschreibung -->
+  <p>
+    👀 twinks • a little more than just friends • spicy
+  </p>
+
+  <!-- Buttons -->
+  <a href="https://x.com/TimmyAndKyu" class="btn twitter">Twitter / X</a>
+
+  <a href="https://www.instagram.com/timmyandkyu.official/" class="btn instagram">Instagram</a>
+
+  <!-- Beispiel für später -->
+  <!-- <a href="#" class="btn primary">🔥 Exclusive Content</a> -->
+
 </body>
 </html>
