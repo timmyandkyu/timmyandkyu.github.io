@@ -50,27 +50,29 @@
       transition: all 0.2s ease;
     }
 
-    /* GLOSS EFFECT */
-    .btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 200%;
-      height: 100%;
-      background: linear-gradient(
-        120deg,
-        rgba(255,255,255,0.1),
-        rgba(255,255,255,0.5),
-        rgba(255,255,255,0.1)
-      );
-      transition: all 0.4s ease;
-    }
+    /* GLOSS BASIS → UNSICHTBAR */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  opacity: 0; /* wichtig */
+  transition: all 0.4s ease;
+}
 
-    /* GLOSS MOVE */
-    .btn:hover::before {
-      left: 100%;
-    }
+/* NUR BEI HOVER */
+.btn:hover::before {
+  left: 100%;
+  opacity: 1;
+}
 
     /* HOVER / TAP */
     .btn:hover {
