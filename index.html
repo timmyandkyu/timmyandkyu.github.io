@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     
     <!-- Google tag (gtag.js) -->
-    <script 
-      async src="https://www.googletagmanager.com/gtag/js?id=G-Z02Y2MPX8D">
-    </script>
-    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z02Y2MPX8D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Z02Y2MPX8D');
-    </script>
-    
-    <script>
-      function trackClick(name) {
-        gtag('event', name, {
-        'event_category': 'outbound',
-        'event_label': name
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z02Y2MPX8D', {
+          debug_mode: true
         });
-      }
-    </script>
+
+        function trackClick(link_name, link_url) {
+          gtag('event', 'outbound_click', {
+          link_name: link_name,
+          link_url: link_url,
+          debug_mode: true
+          });
+        }
+</script>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -266,7 +265,7 @@
         class="btn primary"
         target="_blank"
         rel="noopener noreferrer"
-        onclick="trackClick('click_onlyfans')">
+        onclick="trackClick('onlyfans', 'https://onlyfans.com/timmyandkyu')"
         🔥 Exclusive Content
       </a>
       
@@ -274,7 +273,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn telegram"
-        onclick="trackClick('click_telegram')">
+        onclick="trackClick('telegram', 'https://t.me/TimmyAndKyu')"
         💬 Private Telegram
       </a>
       
@@ -282,7 +281,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn twitter"
-        onclick="trackClick('click_twitter')">
+        onclick="trackClick('twitter', 'https://x.com/TimmyAndKyu')"
         Twitter / 𝕏
       </a>
       
@@ -290,7 +289,7 @@
         target="_blank"
         rel="noopener noreferrer"
         class="btn instagram"
-        onclick="trackClick('click_instagram')">
+        onclick="trackClick('instagram', 'https://www.instagram.com/timmyandkyu.official/')"
         Instagram
       </a>
       
