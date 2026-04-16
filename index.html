@@ -14,6 +14,15 @@
   'cookie_domain': 'none'
 });
       </script>
+
+  <script>
+function trackClick(name) {
+  gtag('event', name, {
+    'event_category': 'outbound',
+    'event_label': name
+  });
+}
+</script>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -253,10 +262,34 @@
       <p class="bio">👀 twinks • a little more than just friends • spicy</p>
       <p class="trust">updated every few days</p>
 
-      <a href="https://onlyfans.com/timmyandkyu" class="btn primary" target="_blank" rel="noopener noreferrer">🔥 Exclusive Content</a>
-      <a href="https://t.me/TimmyAndKyu" target="_blank" rel="noopener noreferrer" class="btn telegram">💬 VIP Telegram</a>
-      <a href="https://x.com/TimmyAndKyu" target="_blank" rel="noopener noreferrer" class="btn twitter">Twitter / 𝕏</a>
-      <a href="https://www.instagram.com/timmyandkyu.official/" target="_blank" rel="noopener noreferrer" class="btn instagram">Instagram</a>
+      <a href="https://onlyfans.com/timmyandkyu"
+   class="btn primary"
+   target="_blank"
+   rel="noopener noreferrer"
+   onclick="trackClick('click_onlyfans')">
+   🔥 Exclusive Content
+</a>
+      <a href="https://t.me/TimmyAndKyu"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn telegram"
+   onclick="trackClick('click_telegram')">
+   💬 Private Telegram
+</a>
+      <a href="https://x.com/TimmyAndKyu"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn twitter"
+   onclick="trackClick('click_twitter')">
+   Twitter / 𝕏
+</a>
+      <a href="https://www.instagram.com/timmyandkyu.official/"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="btn instagram"
+   onclick="trackClick('click_instagram')">
+   Instagram
+</a>
       <p class="footer">TimmyAndKyu Hub</p>
     </div>
   </div>
