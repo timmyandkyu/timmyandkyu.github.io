@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z02Y2MPX8D"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TimmyAndKyu Hub. Find our official links and exclusive content." />
+  <meta name="theme-color" content="#050505" />
 
-        gtag('config', 'G-Z02Y2MPX8D', {
-          debug_mode: true
-        });
+  <title>TimmyAndKyu</title>
 
-        function trackClick(link_name, link_url) {
-          gtag('event', 'outbound_click', {
-          link_name: link_name,
-          link_url: link_url,
-          debug_mode: true
-          });
-        }
-</script>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-<title>TimmyAndKyu</title>
-  
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/Who_we_are.png">
-  
-<style>
-  * {
-    box-sizing: border-box;
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/Who_we_are.png"
+  />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z02Y2MPX8D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
     }
 
-      body {
+    gtag('js', new Date());
+    gtag('config', 'G-Z02Y2MPX8D');
+
+    function trackClick(linkName, linkUrl) {
+      gtag('event', 'outbound_click', {
+        link_name: linkName,
+        link_url: linkUrl
+      });
+    }
+  </script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
       margin: 0;
       min-height: 100vh;
       font-family: Arial, sans-serif;
@@ -46,37 +54,38 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      }
+      padding: 20px 0;
+    }
 
-      body::before {
+    body::before {
       content: "";
       position: fixed;
       inset: 0;
       background:
-      radial-gradient(circle at center, rgba(225, 48, 108, 0.18) 0%, rgba(225, 48, 108, 0.08) 20%, rgba(0, 0, 0, 0) 48%);
+        radial-gradient(circle at center, rgba(225, 48, 108, 0.18) 0%, rgba(225, 48, 108, 0.08) 20%, rgba(0, 0, 0, 0) 48%);
       pointer-events: none;
       z-index: 0;
-      }
+    }
 
-      body::after {
+    body::after {
       content: "";
       position: fixed;
       inset: 0;
       background:
-      radial-gradient(circle at top center, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 12%, rgba(0, 0, 0, 0) 35%);
+        radial-gradient(circle at top center, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 12%, rgba(0, 0, 0, 0) 35%);
       pointer-events: none;
       z-index: 0;
-      }
+    }
 
-      .wrap {
+    .wrap {
       position: relative;
       z-index: 1;
       width: 100%;
       max-width: 430px;
       padding: 24px;
-      }
+    }
 
-      .card {
+    .card {
       background: rgba(12, 12, 12, 0.72);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 28px;
@@ -87,9 +96,9 @@
         0 0 50px rgba(225, 48, 108, 0.08);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      }
+    }
 
-      .profile {
+    .profile {
       width: 124px;
       height: 124px;
       object-fit: cover;
@@ -100,57 +109,67 @@
       box-shadow:
         0 0 0 4px rgba(255, 255, 255, 0.03),
         0 0 28px rgba(255, 255, 255, 0.08);
-      }
+    }
 
-      h1 {
+    h1 {
       margin: 0 0 10px;
       font-size: 40px;
       line-height: 1.05;
       font-weight: 800;
       letter-spacing: -0.02em;
-      }
+    }
 
-      .bio {
-      margin: 0;
+    .bio {
+      margin: 0 auto;
+      max-width: 300px;
       color: rgba(255, 255, 255, 0.58);
       font-size: 16px;
       line-height: 1.5;
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-      }
+    }
 
-      .trust {
+    .trust {
       margin: 10px 0 24px;
       color: rgba(255, 255, 255, 0.35);
       font-size: 13px;
-      }
+    }
 
-      .btn {
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    .btn {
       position: relative;
       overflow: hidden;
       display: block;
       width: 100%;
-      max-width: 340px;
-      margin: 12px auto;
       padding: 17px 18px;
       border-radius: 16px;
       text-decoration: none;
       font-size: 17px;
       font-weight: 700;
       transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.22s ease;
-      }
+    }
 
-      .btn:hover {
+    .btn:hover {
       transform: translateY(-1px) scale(1.02);
       opacity: 0.99;
-      }
+    }
 
-      .btn:active {
+    .btn:active {
       transform: scale(0.985);
-      }
+    }
 
-      .btn::before {
+    .btn:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.9);
+      outline-offset: 3px;
+    }
+
+    .btn::before {
       content: "";
       position: absolute;
       top: 0;
@@ -164,65 +183,75 @@
         transparent
       );
       transform: skewX(-20deg);
-      }
+    }
 
-      .btn:hover::before {
+    .btn:hover::before {
       left: 125%;
       transition: left 0.7s ease;
-      }
+    }
 
-      .primary {
+    .primary {
       background: linear-gradient(135deg, #00AFF0, #008ECC);
       color: white;
       box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.06) inset,
         0 0 24px rgba(0, 175, 240, 0.32);
       animation: pulse 2.2s infinite;
-      }
+    }
 
-      .telegram {
+    .telegram {
       background: linear-gradient(135deg, #0088cc, #0077b6);
       color: white;
       box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.06) inset,
         0 0 22px rgba(0, 136, 204, 0.28);
-      }
+    }
 
-      .telegram:hover {
+    .telegram:hover {
       box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.06) inset,
         0 0 30px rgba(0, 136, 204, 0.45);
-      }
+    }
 
-      .twitter {
+    .twitter {
       background: rgba(255, 255, 255, 0.92);
       color: black;
       box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.08) inset,
         0 0 18px rgba(255, 255, 255, 0.10);
-      }
+    }
 
-      .instagram {
+    .instagram {
       background: linear-gradient(135deg, #E1306C, #c81e5d);
       color: white;
       box-shadow:
         0 0 0 1px rgba(255, 255, 255, 0.06) inset,
         0 0 22px rgba(225, 48, 108, 0.24);
-      }
+    }
 
-      .footer {
+    .footer {
       font-size: 12px;
       opacity: 0.5;
       margin-top: 20px;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 18px rgba(0,175,240,0.28);
+      }
+      50% {
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 34px rgba(0,175,240,0.58);
+      }
+      100% {
+        box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 18px rgba(0,175,240,0.28);
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        align-items: flex-start;
       }
 
-      @keyframes pulse {
-      0% { box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 18px rgba(0,175,240,0.28); }
-      50% { box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 34px rgba(0,175,240,0.58); }
-      100% { box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 18px rgba(0,175,240,0.28); }
-      }
-
-      @media (max-width: 480px) {
       .wrap {
         padding: 16px;
       }
@@ -243,59 +272,78 @@
       .btn {
         font-size: 16px;
         padding: 16px;
+        border-radius: 14px;
+      }
+
+      .links {
+        gap: 10px;
       }
     }
-</style>
+  </style>
 </head>
-  
+
 <body>
-  <div class="wrap">
-    <div class="card">
+  <main class="wrap">
+    <section class="card">
       <img
         class="profile"
         src="https://raw.githubusercontent.com/timmyandkyu/timmyandkyu.github.io/main/Who_we_are.png"
-        alt="TimmyAndKyu">
+        alt="TimmyAndKyu profile picture"
+      />
 
       <h1>TimmyAndKyu</h1>
 
       <p class="bio">👀 twinks • a little more than just friends • spicy</p>
       <p class="trust">updated every few days</p>
 
-      <a href="https://onlyfans.com/timmyandkyu"
-        class="btn primary"
-        target="_blank"
-        rel="noopener noreferrer"
-        onclick="trackClick('onlyfans', 'https://onlyfans.com/timmyandkyu')">
-        🔥 Exclusive Content
-      </a>
-      
-      <a href="https://t.me/TimmyAndKyu"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn telegram"
-        onclick="trackClick('telegram', 'https://t.me/TimmyAndKyu')">
-        💬 Private Telegram
-      </a>
-      
-      <a href="https://x.com/TimmyAndKyu"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn twitter"
-        onclick="trackClick('twitter', 'https://x.com/TimmyAndKyu')">
-        Twitter / 𝕏
-      </a>
-      
-      <a href="https://www.instagram.com/timmyandkyu.official/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn instagram"
-        onclick="trackClick('instagram', 'https://www.instagram.com/timmyandkyu.official/')">
-        Instagram
-      </a>
-      
-      <p class="footer">TimmyAndKyu Hub</p>
-      
+      <div class="links">
+        <a
+          href="https://onlyfans.com/timmyandkyu"
+          class="btn primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open OnlyFans"
+          onclick="trackClick('onlyfans', 'https://onlyfans.com/timmyandkyu')"
+        >
+          🔥 Exclusive Content
+        </a>
+
+        <a
+          href="https://t.me/TimmyAndKyu"
+          class="btn telegram"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Telegram"
+          onclick="trackClick('telegram', 'https://t.me/TimmyAndKyu')"
+        >
+          💬 Private Telegram
+        </a>
+
+        <a
+          href="https://x.com/TimmyAndKyu"
+          class="btn twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open X"
+          onclick="trackClick('x', 'https://x.com/TimmyAndKyu')"
+        >
+          X / Twitter
+        </a>
+
+        <a
+          href="https://www.instagram.com/timmyandkyu.official/"
+          class="btn instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Instagram"
+          onclick="trackClick('instagram', 'https://www.instagram.com/timmyandkyu.official/')"
+        >
+          Instagram
+        </a>
       </div>
-    </div>
-  </body>
+
+      <p class="footer">TimmyAndKyu Hub</p>
+    </section>
+  </main>
+</body>
 </html>
