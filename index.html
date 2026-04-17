@@ -240,12 +240,36 @@
             0 0 0 1px rgba(255, 255, 255, 0.05) inset,
             0 10px 24px rgba(0, 0, 0, 0.30);
         }
-
+        
+        @keyframes pulse {
+          0% {
+          box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.07) inset,
+          0 0 18px rgba(0, 175, 240, 0.28),
+          0 10px 24px rgba(0, 0, 0, 0.32);
+          }
+          50% {
+            box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.07) inset,
+            0 0 34px rgba(0, 175, 240, 0.52),
+            0 10px 24px rgba(0, 0, 0, 0.32);
+          }
+          100% {
+            box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.07) inset,
+            0 0 18px rgba(0, 175, 240, 0.28),
+            0 10px 24px rgba(0, 0, 0, 0.32);
+          }
+        }
         .telegram:hover {
           background: linear-gradient(135deg, #5b7d9d, #384858);
           border-color: rgba(255, 255, 255, 0.30);
         }
-
+        .footer {
+          font-size: 12px;
+          opacity: 0.5;
+          margin-top: 20px;
+        }
         @media (max-width: 480px) {
           body {
             align-items: flex-start;
