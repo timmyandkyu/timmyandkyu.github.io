@@ -190,21 +190,25 @@
           transition: left 0.7s ease;
         }
 
-        .primary {
+        .onlyfans {
           background: linear-gradient(135deg, #00AFF0, #008ECC);
           color: white;
+          transform: scale(1.02);
           box-shadow:
             0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-            0 0 24px rgba(0, 175, 240, 0.32);
+            0 0 30px rgba(0, 175, 240, 0.45),
+            0 0 60px rgba(0, 175, 240, 0.25);
           animation: pulse 2.2s infinite;
+        }
+        
+        .onlyfans:hover {
+          transform: scale(1.05);
         }
 
         .telegram {
-          background: linear-gradient(135deg, #0088cc, #0077b6);
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.15);
           color: white;
-          box-shadow:
-            0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-            0 0 22px rgba(0, 136, 204, 0.28);
         }
 
         .telegram:hover {
@@ -214,8 +218,8 @@
         }
 
         .twitter {
-          background: rgba(255, 255, 255, 0.92);
-          color: black;
+          background: #111;
+          color: white;
           box-shadow:
             0 0 0 1px rgba(255, 255, 255, 0.08) inset,
             0 0 18px rgba(255, 255, 255, 0.10);
@@ -299,7 +303,7 @@
           <div class="links">
             <a
               href="https://onlyfans.com/timmyandkyu"
-              class="btn primary"
+              class="btn onlyfans"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open OnlyFans"
