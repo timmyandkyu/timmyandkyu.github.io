@@ -141,17 +141,25 @@
           overflow: hidden;
           display: block;
           width: 100%;
+          min-height: 58px;
           padding: 17px 18px;
-          border-radius: 16px;
+          border-radius: 18px;
           text-decoration: none;
           font-size: 17px;
-          font-weight: 700;
-          transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.22s ease;
+          font-weight: 800;
+          line-height: 1.2;
+          letter-spacing: 0.01em;
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.03) inset,
+            0 8px 22px rgba(0, 0, 0, 0.35);
+          transition: transform 0.18s ease, opacity 0.18s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
         }
 
         .btn:hover {
-          transform: translateY(-1px) scale(1.02);
-          opacity: 0.99;
+          transform: translateY(-1px) scale(1.015);
+          opacity: 1;
         }
 
         .btn:active {
@@ -159,7 +167,7 @@
         }
 
         .btn:focus-visible {
-          outline: 2px solid rgba(255, 255, 255, 0.9);
+          outline: 2px solid rgba(255, 255, 255, 0.95);
           outline-offset: 3px;
         }
 
@@ -173,10 +181,10 @@
           background: linear-gradient(
             120deg,
             transparent,
-            rgba(255, 255, 255, 0.38),
+            rgba(255, 255, 255, 0.30),
             transparent
           );
-            transform: skewX(-20deg);
+          transform: skewX(-20deg);
         }
 
         .btn:hover::before {
@@ -185,111 +193,92 @@
         }
 
         .onlyfans {
-          background: linear-gradient(135deg, #00AFF0, #008ECC);
+          background: linear-gradient(135deg, #12b8f4, #008fcc);
+          border: 1px solid rgba(255, 255, 255, 0.22);
           color: white;
           transform: scale(1.02);
           box-shadow:
-            0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-            0 0 30px rgba(0, 175, 240, 0.45),
-            0 0 60px rgba(0, 175, 240, 0.25);
+            0 0 0 1px rgba(255, 255, 255, 0.07) inset,
+            0 0 30px rgba(0, 175, 240, 0.42),
+            0 10px 24px rgba(0, 0, 0, 0.32);
           animation: pulse 2.2s infinite;
         }
-        
+
         .onlyfans:hover {
-          transform: scale(1.05);
-        }
-
-        .telegram {
-          background: linear-gradient(
-          135deg,
-          rgba(70, 95, 120, 0.30),
-          rgba(40, 48, 58, 0.88)
-        );
-          border: 1px solid rgba(140, 185, 230, 0.18);
-          color: white;
-          box-shadow:
-            0 0 0 1px rgba(255, 255, 255, 0.03) inset,
-            0 0 14px rgba(90, 150, 210, 0.08);
-        }
-
-        .telegram:hover {
-          background: linear-gradient(
-          135deg,
-          rgba(78, 108, 136, 0.36),
-          rgba(46, 56, 68, 0.92)
-        );
-          box-shadow:
-            0 0 0 1px rgba(255, 255, 255, 0.04) inset,
-            0 0 18px rgba(90, 150, 210, 0.12);
-        }
-
-        .twitter {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.10);
-          color: white;
-          box-shadow:
-            0 0 0 1px rgba(255, 255, 255, 0.02) inset,
-            0 0 8px rgba(255, 255, 255, 0.03);
+          transform: translateY(-1px) scale(1.03);
         }
 
         .instagram {
-          background: linear-gradient(135deg, #E1306C, #c81e5d);
+          background: linear-gradient(135deg, #e1306c, #c81e5d);
+          border: 1px solid rgba(255, 255, 255, 0.20);
           color: white;
           box-shadow:
             0 0 0 1px rgba(255, 255, 255, 0.06) inset,
-            0 0 22px rgba(225, 48, 108, 0.24);
+            0 0 22px rgba(225, 48, 108, 0.24),
+            0 10px 24px rgba(0, 0, 0, 0.30);
         }
 
-        .footer {
-          font-size: 12px;
-          opacity: 0.5;
-          margin-top: 20px;
+        .twitter {
+          background: linear-gradient(135deg, #2a2a2a, #171717);
+          border: 1px solid rgba(255, 255, 255, 0.24);
+          color: white;
+          box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+            0 10px 24px rgba(0, 0, 0, 0.34);
         }
 
-        @keyframes pulse {
-          0% {
-            box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 18px rgba(0,175,240,0.28);
-          }
-          50% {
-            box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 34px rgba(0,175,240,0.58);
-          }
-          100% {
-            box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset, 0 0 18px rgba(0,175,240,0.28);
-          }
+        .twitter:hover {
+          background: linear-gradient(135deg, #343434, #1d1d1d);
+          border-color: rgba(255, 255, 255, 0.34);
+        }
+
+        .telegram {
+          background: linear-gradient(135deg, #4f6f8d, #2f3d4b);
+          border: 1px solid rgba(255, 255, 255, 0.22);
+          color: white;
+          box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+            0 10px 24px rgba(0, 0, 0, 0.30);
+        }
+
+        .telegram:hover {
+          background: linear-gradient(135deg, #5b7d9d, #384858);
+          border-color: rgba(255, 255, 255, 0.30);
         }
 
         @media (max-width: 480px) {
-        body {
-          align-items: flex-start;
-        }
+          body {
+            align-items: flex-start;
+          }
 
-        .wrap {
-          padding: 16px;
-        }
+          .wrap {
+             padding: 16px;
+          }
 
-        .card {
-          padding: 26px 18px 20px;
-          border-radius: 24px;
-        }
+          .card {
+            padding: 26px 18px 20px;
+            border-radius: 24px;
+          }
 
-        h1 {
-          font-size: 34px;
-        }
+          h1 {
+            font-size: 34px;
+          }
 
-        .bio {
-          font-size: 15px;
-        }
+          .bio {
+            font-size: 15px;
+          }
 
-        .btn {
-          font-size: 16px;
-          padding: 16px;
-          border-radius: 14px;
-        }
+          .btn {
+            min-height: 60px;
+            font-size: 16px;
+            padding: 16px;
+            border-radius: 16px;
+          }
 
-        .links {
-          gap: 10px;
+          .links {
+            gap: 12px;
+          }
         }
-      }
       </style>
   </head>
 
