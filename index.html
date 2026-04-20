@@ -191,7 +191,27 @@
           );
           transform: skewX(-20deg);
         }
+        
+        .btnText {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 1.1;
+          }
 
+        .btnTitle {
+          font-size: 17px;
+          font-weight: 800;
+        }
+
+        .btnSub {
+          margin-top: 4px;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          opacity: 0.78;
+        }
+        
         .btn:hover::before {
           left: 125%;
           transition: left 0.7s ease;
@@ -336,8 +356,11 @@
               rel="noopener noreferrer"
               aria-label="Open xHamster"
               onclick="trackClick('xhamster', 'https://xhamster.com/users/profiles/timmyandkyu')"
-            >
-              🤭 take a peek
+              >
+              <span class="btnText">
+               <span class="btnTitle">watch cute hamsters here ✨</span>
+                <span class="btnSub">xHamster</span>
+               </span>
             </a>
 
             <a
